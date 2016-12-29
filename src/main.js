@@ -1,13 +1,15 @@
 import * as 打馬 from './打馬';
-import state from'./State';
-
+import state from './State';
+import * as Rule from './rule';
 let 獎金 = 100;
 
 
 function init(){
 	state.players = setPlayer(3);
 	document.body.addEventListener('click', ()=>{
-		round();
+		round({
+			type:'round',
+		});
 	});
 }
 function setPlayer(number) {
@@ -21,24 +23,36 @@ function setPlayer(number) {
 	return players;
 }
 
-function round() {
+function round(action) {
+	switch(action.type){
+		case 'round':
+			diceAction();
+			break;
+		case 'penalty':
+			horseAction();
+			break;
+	}
+}
+
+
+function diceAction(){
 	let dice = 打馬.throwDice3();
 	let result = 打馬._采色(dice);
 	let player = state.current_player;
-	try{
-		打馬._下馬();
-
-		if (player.未設本采) 打馬.set本采(result,player);
-
-		state.上回采色 = result;
-		打馬.nextPlayer();
+	
+	if( Rule._初次散采(采色) ) {
+		打馬.set本采(result,player);
 	}
-	catch(index){
+	else if( Rule._自己真本彩(采色) ) {
+	}else if( Rule.find真本采(采色) ) {
+		let player = Rule._別人真本采(采色);
 		
 	}
-	
-	console.log(result);
-	console.log(state);
+	state.上回采色 = result;
+	打馬.nextPlayer();
 }
 
+function horseAction(){
+
+}
 init();

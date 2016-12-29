@@ -43,42 +43,25 @@ export function _賞罰采(采色) {
 	}
 }
 
-export function _下馬(采色){
-	let horse = 0;
-	if( _自己真本彩(采色) ) {
-		horse = 3;
-	}else if( _自己初次真本彩(采色) ) {
-		horse = 1;
-	}else if( rule.find真本采(采色) ) {
-		let player = _別人真本采(采色);
-		
+function 賞采賞帖( 采色 ){
+	let N = 0;
+	switch(采色.name) {
+		case '堂印':
+			N = 8;
+			break;
+		case '碧油':
+			N = 6;
+			break;
+		case '桃花重五':
+			N = 5;
+			break;
+		case '拍板兒':
+		case '鴈行兒':
+		case '滿盆星':
+			N = 6;
+			break;
+		default:
 	}
-}
-/**
- * @returns {bool}
- */
-function _自己真本彩(采色) {
-	let player = state.current_player;
-	return player.本采 == 采色;
-}
-/**
- * @returns {bool}
- */
-function _自己初次真本彩(采色) {
-	let player = state.current_player;
-	return (
-		player.未設本采
-		&& 采色.type == '散采'
-		&& !rule.find真本采(采色)
-	);
-}
 
-/**
- * @typedef {Object} Player
- * @returns {Player}
- */
-function _別人真本采(采色) {
-	return state.players.find(x => {
-		return (x.本采 === 采色);
-	});
+	return N;
 }
