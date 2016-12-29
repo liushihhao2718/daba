@@ -1,0 +1,35 @@
+{
+  "name": "dama",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "start": "watchify src/main.js -v --debug -t babelify -o public/js/bundle.js",
+    "server": "http-server public",
+    "build": "browserify src/main.js -v -t babelify -o public/js/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-preset-react": "6.1.18",
+    "babelify": "^7.3.0",
+    "eslint-plugin-react": "*",
+    "jsx-test-helpers": "^1.1.0",
+    "react": "*",
+    "react-dom": "^15.3.2",
+    "watchify": "3.7.0"
+  },
+  "dependencies": {
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}

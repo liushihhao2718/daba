@@ -1,0 +1,17 @@
+{
+	// 請參閱 https://go.microsoft.com/fwlink/?LinkId=759670
+	// 以取得關於 jsconfig.json 格式的文件
+	"compilerOptions": {
+		"target": "es6",
+		"module": "es6",
+		"allowSyntheticDefaultImports": true
+	},
+	"exclude": [
+		"node_modules",
+		"bower_components",
+		"jspm_packages",
+		"tmp",
+		"temp",
+        "document"
+	]
+}
