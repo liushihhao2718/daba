@@ -1,3 +1,4 @@
 {
+	"plugins":["static-fs"],
 	"presets": ["es2015","react"]
 }

@@ -12,6 +12,11 @@ let state = {
 		let prev = (this.current_player_index + size - 1) % size;
 		return this.players[prev];
 	},
+	get next_player() {
+		const size = this.players.length;
+		let next = (this.current_player_index + size + 1) % size;
+		return this.players[next];
+	},
 	上回采色: undefined,
 	帖數: 100,
 	giveTo(player, count){

@@ -1,0 +1,19 @@
+ #game_map{
+	font-family: 'Ubuntu Mono', monospace;
+	font-size:14px;
+}
+#game_map span{
+	padding-left: 0.5em;
+}
+.Grid {
+	display: flex;
+}
+
+.Grid-cell {
+	flex: 1;
+}
+.big-btn {
+	width: 90px;
+	height: 90px;
+	font-size: 60px;
+}

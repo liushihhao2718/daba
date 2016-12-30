@@ -2,14 +2,20 @@ import * as Rule from './Rule';
 import state from './State';
 import Flag from './Flag';
 import Player from './Player';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import GameMap from './tag/GameMap.jsx';
 
+const game_map_tag = document.getElementById('game_map');
+const dice_btn = document.getElementById('dice');
 init();
 
 function init(){
 	state.players = setPlayer(3);
-	document.body.addEventListener('click', ()=>{
+	dice_btn.addEventListener('click', ()=>{
 		round();
 	});
+	ReactDOM.render(<GameMap state={state}/>, game_map_tag);
 }
 function setPlayer(number) {
 	let players = [];
@@ -33,14 +39,21 @@ function round() {
 		_下馬(player, flag, 采色);
 	else _行馬();
 
+
 	state.上回采色 = 采色;
 	Rule.nextPlayer();
+
+	ReactDOM.render(<GameMap state={state}/>, game_map_tag);
+
+	console.log(采色);
 }
 /**
  * @param {flag} flag
  */
 function actionPlayer(flag){
 	
+	if( flag['罰色'] )
+		return state.next_player;
 	if(flag['別人真本采'])
 		return flag['別人真本采'];
 
@@ -79,9 +92,13 @@ function _下馬(action_player, flag, 采色) {
 		horse = 2;
 		current_player.giveTo(state, 2);
 	}
+	else {
+		let horse = Rule._賞罰采(采色);
+		state.giveTo(current_player, horse);
+	}
 
-	let count = Rule._賞罰采(采色);
-	state.giveTo(current_player, count);
+
+	
 
 	locateHorse(action_player, horse, 采色.point);
 }

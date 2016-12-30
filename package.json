@@ -13,16 +13,17 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.16.0",
+    "babel-plugin-static-fs": "^1.1.0",
     "babel-preset-react": "6.1.18",
     "babelify": "^7.3.0",
+    "brfs": "^1.4.3",
     "eslint-plugin-react": "*",
     "jsx-test-helpers": "^1.1.0",
     "react": "*",
     "react-dom": "^15.3.2",
     "watchify": "3.7.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "ava": {
     "files": [
       "test/*.js"

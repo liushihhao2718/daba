@@ -13,6 +13,7 @@ class Player {
 		this.馬 = {
 			handle: 20
 		};
+		this.color = getRandomColor();
 	}
 
 	get _未設本采() {
@@ -32,3 +33,12 @@ class Player {
 }
 
 export default Player;
+
+function getRandomColor() {
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++ ) {
+		color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+}
