@@ -1,3 +1,5 @@
+/** @module 打馬 */
+
 import state from'./State';
 import * as rule from './rule';
 
@@ -34,16 +36,20 @@ export	function set本采(采色, player) {
 
 export function _賞罰采(采色) {
 	let player = state.current_player;
+	let N = 0;
 	switch(采色.type) {
 		case '賞采':
-			
+			N = _賞采賞帖;
 			break;
 		case '罰采':
+			N = 2;
+			player.帖數 -= 2;
 			break;
 	}
+	return N;
 }
 
-function 賞采賞帖( 采色 ){
+function _賞采賞帖( 采色 ){
 	let N = 0;
 	switch(采色.name) {
 		case '堂印':
@@ -58,9 +64,10 @@ function 賞采賞帖( 采色 ){
 		case '拍板兒':
 		case '鴈行兒':
 		case '滿盆星':
-			N = 6;
+			N = 4;
 			break;
 		default:
+			N = 2;
 	}
 
 	return N;
