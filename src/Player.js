@@ -1,6 +1,10 @@
 class Player {
 	/**
 	 * @param {string} _name
+	 * @property {string} name
+	 * @property {Object} 本采
+	 * @property {number} 帖數
+	 * @property {Object} 馬
 	 */
 	constructor(_name) {
 		this.name = _name;
@@ -19,6 +23,11 @@ class Player {
  */
 	get handleHorse() {
 		return this.馬.handle;
+	}
+
+	giveTo(player, count){
+		this.帖數 -= count;
+		player.帖數 += count;
 	}
 }
 

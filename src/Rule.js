@@ -1,5 +1,3 @@
-/** @module 打馬 */
-
 import state from'./State';
 import * as rule from './rule';
 

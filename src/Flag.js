@@ -1,9 +1,10 @@
 import state from'./State';
 /**
+ * @param {采色} 采色
  * @return
  * @property {Object} flag
  * @property {Player} flag.別人真本采
- * @property {Player} 別人傍本采
+ * @property {Player} flag.別人傍本采
  **/
 export default function _確立Flag(采色) {
 	
@@ -77,5 +78,7 @@ function _真撞(采色) {
 	return state.上回采色 === 采色;
 }
 function _傍撞(采色) {
+	if(state.上回采色 === undefined) return false;
+	
 	return state.上回采色.point === 采色.point;
 }
