@@ -23,7 +23,9 @@
     "react-dom": "^15.3.2",
     "watchify": "3.7.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "randomcolor": "^0.4.4"
+  },
   "ava": {
     "files": [
       "test/*.js"

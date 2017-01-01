@@ -1,3 +1,5 @@
+import randomColor from 'randomColor';
+
 class Player {
 	/**
 	 * @param {string} _name
@@ -6,14 +8,14 @@ class Player {
 	 * @property {number} 帖數
 	 * @property {Object} 馬
 	 */
-	constructor(_name) {
-		this.name = _name;
+	constructor(_name, _color=randomColor()) {
+		this.name = `player-${_name}`;
 		this.本采 = undefined;
 		this.帖數 = 0;
 		this.馬 = {
 			handle: 20
 		};
-		this.color = getRandomColor();
+		this.color = _color;
 	}
 
 	get _未設本采() {
@@ -33,12 +35,3 @@ class Player {
 }
 
 export default Player;
-
-function getRandomColor() {
-	var letters = '0123456789ABCDEF';
-	var color = '#';
-	for (var i = 0; i < 6; i++ ) {
-		color += letters[Math.floor(Math.random() * 16)];
-	}
-	return color;
-}

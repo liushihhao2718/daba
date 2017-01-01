@@ -1,0 +1,138 @@
+<table class="tg" id="game_board">
+  <tbody><tr>
+    <td class="tg-s6z2" id="t-37">37</td>
+    <td class="tg-s6z2" id="t-38">38</td>
+    <td class="tg-s6z2" id="t-39">39</td>
+    <td class="tg-s6z2" id="t-40">40</td>
+    <td class="tg-s6z2" id="t-41">41</td>
+    <td class="tg-s6z2" id="t-42">42</td>
+    <td class="tg-s6z2" id="t-43">43</td>
+    <td class="tg-s6z2" id="t-44">44</td>
+    <td class="tg-s6z2" id="t-45">45</td>
+    <td class="tg-s6z2" colspan="3" id="t-46">46</td>
+    <td class="tg-s6z2" id="t-47">47</td>
+    <td class="tg-s6z2" id="t-48">48</td>
+    <td class="tg-s6z2" id="t-49">49</td>
+    <td class="tg-s6z2" id="t-50">50</td>
+    <td class="tg-s6z2" id="t-51">51</td>
+    <td class="tg-s6z2" id="t-52">52</td>
+    <td class="tg-s6z2" id="t-53">53</td>
+    <td class="tg-s6z2" id="t-54">54</td>
+    <td class="tg-s6z2" id="t-55">55</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-36">36</td>
+    <td class="tg-baqh" colspan="19" rowspan="8" style="border-style: none;" id="t-"></td>
+    <td class="tg-baqh" id="t-56">56</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-35">35</td>
+    <td class="tg-baqh" id="t-57">57</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-34">34</td>
+    <td class="tg-baqh" id="t-58">58</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-33">33</td>
+    <td class="tg-baqh" id="t-59">59</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-32">32</td>
+    <td class="tg-baqh" id="t-60">60</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-31">31</td>
+    <td class="tg-baqh" id="t-61">61</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-30">30</td>
+    <td class="tg-baqh" id="t-62">62</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-29">29</td>
+    <td class="tg-baqh" id="t-63">63</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-28">28<br>汧陽監</td>
+    <td class="tg-baqh" colspan="8" rowspan="9" style="border-style: none;" id="t-"></td>
+    <td class="tg-baqh" id="t-1">1<br>赤岸驛</td>
+    <td class="tg-baqh" rowspan="10"></td>
+    <td class="tg-baqh" id="t-91">91<br>尚乘局</td>
+    <td class="tg-baqh" colspan="8" rowspan="9" style="border-style: none;" id="t-"></td>
+    <td class="tg-baqh" id="t-64">64<br>天駟監</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-27">27</td>
+    <td class="tg-baqh" id="t-2">2</td>
+    <td class="tg-baqh" id="t-90">90</td>
+    <td class="tg-baqh" id="t-65">65</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-26">26</td>
+    <td class="tg-baqh" id="t-3">3</td>
+    <td class="tg-baqh" id="t-89">89</td>
+    <td class="tg-baqh" id="t-66">66</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-25">25</td>
+    <td class="tg-baqh" id="t-4">4</td>
+    <td class="tg-baqh" id="t-88">88</td>
+    <td class="tg-baqh" id="t-67">67</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-24">24</td>
+    <td class="tg-baqh" id="t-5">5</td>
+    <td class="tg-baqh" id="t-87">87</td>
+    <td class="tg-baqh" id="t-68">68</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-23">23</td>
+    <td class="tg-baqh" id="t-6">6</td>
+    <td class="tg-baqh" id="t-86">86</td>
+    <td class="tg-baqh" id="t-69">69</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-22">22</td>
+    <td class="tg-baqh" id="t-7">7</td>
+    <td class="tg-baqh" id="t-85">85</td>
+    <td class="tg-baqh" id="t-70">70</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-21">21</td>
+    <td class="tg-baqh" id="t-8">8</td>
+    <td class="tg-baqh" id="t-84">84</td>
+    <td class="tg-baqh" id="t-71">71</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-20">20</td>
+    <td class="tg-baqh" id="t-9"><br>9<br></td>
+    <td class="tg-baqh" id="t-83">83</td>
+    <td class="tg-baqh" id="t-72">72</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" id="t-19">19<br>玉門關</td>
+    <td class="tg-baqh" id="t-18">18</td>
+    <td class="tg-baqh" id="t-17">17</td>
+    <td class="tg-baqh" id="t-16">16</td>
+    <td class="tg-baqh" id="t-15">15</td>
+    <td class="tg-baqh" id="t-14">14</td>
+    <td class="tg-baqh" id="t-13">13</td>
+    <td class="tg-baqh" id="t-12">12</td>
+    <td class="tg-baqh" id="t-11">11</td>
+    <td class="tg-baqh" id="t-10
+隴西監">10<br>隴西監</td>
+    <td class="tg-baqh" id="t-82
+飛龍院">82<br>飛龍院</td>
+    <td class="tg-baqh" id="t-81">81</td>
+    <td class="tg-baqh" id="t-80">80</td>
+    <td class="tg-baqh" id="t-79">79</td>
+    <td class="tg-baqh" id="t-78">78</td>
+    <td class="tg-baqh" id="t-77">77</td>
+    <td class="tg-baqh" id="t-76">76</td>
+    <td class="tg-baqh" id="t-75">75</td>
+    <td class="tg-baqh" id="t-74">74</td>
+    <td class="tg-baqh" id="t-73
+騏驛院">73<br>騏驛院</td>
+  </tr>
+</tbody></table>

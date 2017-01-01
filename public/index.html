@@ -3,12 +3,18 @@
     <link href="css/style.css" rel="stylesheet">
     <body>
         <div class="Grid">
-            <div id="game_map" class="Grid-cell"></div>
-            <div class="Grid-cell">
-                <button id="dice" class="big-btn">⚅</button>
+            <div id="game_map" class="Grid-left"></div>
+            <div class="Grid-right">
+                <div class="aside-List">
+                    <button id="dice" class="big-btn">⚅</button>
+                </div>
+                <div id="player-list"></div>
             </div>
         </div>
        
     </body>
+    <script>
+        document.getElementById('game_map').style.height = screen.height-10;
+    </script>
     <script src="js/bundle.js"></script>
 </html>

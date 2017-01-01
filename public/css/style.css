@@ -1,6 +1,6 @@
  #game_map{
 	font-family: 'Ubuntu Mono', monospace;
-	font-size:14px;
+	/*font-size:14px;*/
 }
 #game_map span{
 	padding-left: 0.5em;
@@ -9,7 +9,10 @@
 	display: flex;
 }
 
-.Grid-cell {
+.Grid-left {
+	flex: 3;
+}
+.Grid-right {
 	flex: 1;
 }
 .big-btn {
@@ -17,3 +20,15 @@
 	height: 90px;
 	font-size: 60px;
 }
+
+.aside-List {
+	flex-direction: column;
+	/*height: 90px;*/
+	border-style:solid;
+	margin: 5px;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
+.tg .tg-baqh{text-align:center;vertical-align:top}

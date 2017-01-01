@@ -5,9 +5,13 @@ import Player from './Player';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import GameMap from './tag/GameMap.jsx';
+import {PlayerList} from './tag/Player.jsx';
+import randomColor from 'randomColor';
+
 
 const game_map_tag = document.getElementById('game_map');
 const dice_btn = document.getElementById('dice');
+const playListRoot = document.getElementById('player-list');
 init();
 
 function init(){
@@ -16,11 +20,13 @@ function init(){
 		round();
 	});
 	ReactDOM.render(<GameMap state={state}/>, game_map_tag);
+	ReactDOM.render(<PlayerList />, playListRoot);
 }
 function setPlayer(number) {
 	let players = [];
+	let colors = randomColor({luminosity: 'light',count: number});
 	for (var i = 1; i <= number; i++) {
-		const p = new Player(`player-${i}`);
+		const p = new Player(i, colors[i]);
 		players.push(p);
 	}
 	return players;
@@ -31,7 +37,7 @@ function round() {
 	let 采色 = Rule._采色(dice);
 	
 	const flag = Flag(采色);
-
+	console.log(flag);
 	/** @type {Player} */
 	let player = actionPlayer(flag);
 
@@ -44,8 +50,9 @@ function round() {
 	Rule.nextPlayer();
 
 	ReactDOM.render(<GameMap state={state}/>, game_map_tag);
-
-	console.log(采色);
+	ReactDOM.render(<PlayerList />, playListRoot);
+	console.log(state);
+	console.log(采色.name);
 }
 /**
  * @param {flag} flag
