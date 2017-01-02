@@ -31,6 +31,11 @@ function replaceWitdPlayer(player, game_map) {
 
 export default function GameMap() {
 	let a = processGameMap( state );
+	let keys = Object.keys(state.flag)
+		.filter(k => (state.flag[k] !== undefined) && (state.flag[k] !== false));
+
+	if(keys.length == 0) keys = '';
+	else keys =	keys.reduce((a,b)=> `${a} ${b}`);
 	return (
 		<table className="tg">
 		<tbody>
@@ -57,7 +62,9 @@ export default function GameMap() {
 		</tr>
 		<tr>
 			<td className="tg-baqh">{a[36]}</td>
-			<td className="tg-baqh" colSpan="19" rowSpan="8" style={{borderStyle:'none'}}></td>
+			<td className="tg-baqh" colSpan="19" rowSpan="8" style={{borderStyle:'none'}}>
+				<div>{keys}</div>
+			</td>
 			<td className="tg-baqh">{a[56]}</td>
 		</tr>
 		<tr>

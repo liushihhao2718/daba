@@ -16,7 +16,8 @@ export default function _確立Flag(采色) {
 		'別人傍本采':_別人傍本采(采色),
 		'真撞':_真撞(采色),
 		'傍撞':_傍撞(采色),
-		'罰色': (采色.type === '罰色')
+		'罰色': (采色.type === '罰色'),
+		'渾花': _渾花(采色)
 	};
 }
 
@@ -82,4 +83,9 @@ function _傍撞(采色) {
 	if(state.上回采色 === undefined) return false;
 	
 	return state.上回采色.point === 采色.point;
+}
+
+function _渾花(采色){
+	const 渾花 = ['滿盆星', '拍板兒', '鴈行兒', '堂印', '桃花重五', '碧油'];
+	if(渾花.find(采色.name)) return true;
 }

@@ -10,7 +10,7 @@ export function PlayerList() {
 
 const Player = React.createClass({
 	propTypes:{
-		player: React.propTypes.object.isRequired
+		player: React.PropTypes.object
 	},
 	render: function(){
 		let player = this.props.player;
@@ -42,6 +42,7 @@ const Player = React.createClass({
 						</tr>
 					</tbody>
 				</table>
+				{state.current_player === player && <button id="dice" className="big-btn" onClick={state.round}>⚅</button>}
 			</div>
 		);
 	}

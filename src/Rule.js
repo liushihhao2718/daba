@@ -1,9 +1,19 @@
 import state from'./State';
 import * as rule from './rule';
 
-export	function nextPlayer() {
-	let index = state.current_player_index;
-	index = (index + 1) % state.players.length;
+export	function nextPlayer(flag) {
+	let index;
+
+	if( flag['自己真本彩'] ) {
+		index = state.current_player_index;
+	}
+	else if( flag['別人真本采'] ) {
+		index = state.players.indexOf(flag['別人真本采']);
+	}
+	else{
+		index = (state.current_player_index + 1) % state.players.length;
+	}
+	
 	state.current_player_index = index;
 }
 
@@ -36,10 +46,10 @@ export function _賞罰采(采色) {
 	let player = state.current_player;
 	let N = 0;
 	switch(采色.type) {
-		case '賞采':
-			N = _賞采賞帖;
+		case '賞色':
+			N = _賞采賞帖(采色);
 			break;
-		case '罰采':
+		case '罰色':
 			N = 2;
 			player.帖數 -= 2;
 			break;
