@@ -10,15 +10,11 @@ import randomColor from 'randomColor';
 
 
 const game_map_tag = document.getElementById('game_map');
-// const dice_btn = document.getElementById('dice');
 const playListRoot = document.getElementById('player-list');
 init();
 
 function init(){
 	state.players = setPlayer(3);
-	// dice_btn.addEventListener('click', ()=>{
-	// 	round();
-	// });
 
 	state.round = round;
 	ReactDOM.render(<GameMap state={state}/>, game_map_tag);
@@ -154,11 +150,7 @@ function _行馬(action_player, flag, 采色) {
 	let horse = 0;
 	let current_player = state.current_player;
 
-	if( flag['初次散采'] ) {
-		horse = 1;
-		current_player.本采 = 采色;
-	}
-	else if( flag['自己真本彩'] ) {
+	if( flag['自己真本彩'] ) {
 		horse = 3;
 	}
 	else if( flag['別人真本采'] ) {
@@ -196,6 +188,6 @@ function _行馬(action_player, flag, 采色) {
 		locateHorse(action_player, horse, locate);
 }
 
-function go(){
+function go(action_player, from, to){
 	
 }

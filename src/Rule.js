@@ -48,9 +48,12 @@ export function _賞罰采(采色) {
 	switch(采色.type) {
 		case '賞色':
 			N = _賞采賞帖(采色);
+			console.log(`賞 ${player.name} 帖數 ${player.帖數} => ${player.帖數+N}`);
+			player.帖數 += N;
 			break;
 		case '罰色':
 			N = 2;
+			console.log(`罰 ${player.name} 帖數 ${player.帖數} => ${player.帖數-2}`)
 			player.帖數 -= 2;
 			break;
 	}

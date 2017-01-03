@@ -87,5 +87,6 @@ function _傍撞(采色) {
 
 function _渾花(采色){
 	const 渾花 = ['滿盆星', '拍板兒', '鴈行兒', '堂印', '桃花重五', '碧油'];
-	if(渾花.find(采色.name)) return true;
+	return 渾花.some((x)=> x === 采色.name);
+
 }
