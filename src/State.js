@@ -18,6 +18,14 @@ let state = {
 		let next = (this.current_player_index + size + 1) % size;
 		return this.players[next];
 	},
+	get prev_player_index() {
+		const size = this.players.length;
+		return (this.current_player_index + size - 1) % size;
+	},
+	get next_player_index() {
+		const size = this.players.length;
+		return (this.current_player_index + size + 1) % size;
+	},
 	上回采色: undefined,
 	帖數: 100,
 	giveTo(player, count){

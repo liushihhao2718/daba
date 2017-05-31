@@ -1,22 +1,6 @@
 import state from'./State';
 import * as rule from './rule';
 
-export	function nextPlayer(flag) {
-	let index;
-
-	if( flag['自己真本彩'] ) {
-		index = state.current_player_index;
-	}
-	else if( flag['別人真本采'] ) {
-		index = state.players.indexOf(flag['別人真本采']);
-	}
-	else{
-		index = (state.current_player_index + 1) % state.players.length;
-	}
-	
-	state.current_player_index = index;
-}
-
 export	function _采色(dice3) {
 	const table = require('./采色圖.json');
 
@@ -60,7 +44,7 @@ export function _賞罰采(采色) {
 	return N;
 }
 
-function _賞采賞帖( 采色 ){
+export function _賞采賞帖( 采色 ){
 	let N = 0;
 	switch(采色.name) {
 		case '堂印':
